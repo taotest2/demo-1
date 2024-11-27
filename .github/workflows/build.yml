@@ -21,15 +21,6 @@ jobs:
           distribution: 'temurin'
           java-version: '17' # Replace with your project's Java version
 
-      # Step 3: Cache Maven dependencies to speed up builds
-      - name: Cache Maven dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
-
       # Step 4: Build and test the project
       - name: Build and Test with Maven
         run: mvn clean verify
