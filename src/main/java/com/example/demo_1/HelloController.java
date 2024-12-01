@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
-    public static final String HELLO_STRING = "Hello! bruh";
+    public static final String HELLO_STRING = "Hello! version 3";
 
     @GetMapping("/")
     public String sayHello() {
