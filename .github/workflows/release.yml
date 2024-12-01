@@ -26,7 +26,8 @@ jobs:
       - name: Get the new version tag
         id: get_tag
         uses: anothrNick/github-tag-action@v1
-        with:
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: true
       # Output: `steps.get_tag.outputs.new_tag` contains the new tag
 
